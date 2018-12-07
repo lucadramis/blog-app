@@ -1,0 +1,14 @@
+.post {
+    border: solid 1px;
+    text-align: center;
+    margin: 40px 200px 40px 200px;
+}
+#id {
+    font-size: 25px;
+}
+#title {
+    font-size: 30px;
+}
+#body {
+    color: blue;
+}

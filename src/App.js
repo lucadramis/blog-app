@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Feed from './components/feed'
-
+import Post from './components/post'
 import Menu from './components/menu'
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    {
+        this.state =
+            { post: [] }
+    }
+  } 
+componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => this.setState({post: data}));
+}
   
   render() {
     return (
       <div>
         <Menu/>
-        <Feed/>
+
+        {this.props.item.map((item) =>
+        <Post item = {item}/>)}
         
       </div>
     );
