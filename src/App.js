@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import User from './components/user'
 import Menu from './components/menu'
+import Liveclock from './components/clock.js'
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
     return (
       <div>
         <Menu/>
+        <Liveclock/>
         <User/>
 
         {/*this.state.post.map((item) =>
